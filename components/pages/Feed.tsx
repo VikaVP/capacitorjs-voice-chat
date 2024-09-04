@@ -13,10 +13,15 @@ import {
   IonMenuButton,
 } from '@ionic/react';
 import Notifications from './Notifications';
-import { useState } from 'react';
+import { lazy, useState } from 'react';
 import { notificationsOutline } from 'ionicons/icons';
 import { selectHomeItems } from '../../store/selectors';
 import Store from '../../store';
+import dynamic from 'next/dynamic';
+// import Search from './Search';
+const Search = dynamic(() => import('./Search'), {
+  ssr: false,
+});
 
 type FeedCardProps = {
   title: string;
@@ -100,9 +105,10 @@ const Feed = () => {
           open={showNotifications}
           onDidDismiss={() => setShowNotifications(false)}
         />
-        {homeItems.map((i, index) => (
+        <Search />
+        {/* {homeItems.map((i, index) => (
           <FeedCard {...i} key={index} />
-        ))}
+        ))} */}
       </IonContent>
     </IonPage>
   );

@@ -39,6 +39,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* <head>
+      <Script
+        type="module"
+        async
+        src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.14.0/dist/ort.min.js"
+        strategy="beforeInteractive"
+      />
+      <Script
+        type="module"
+        async
+        src="https://cdn.jsdelivr.net/npm/@ricky0123/vad-web@0.0.18/dist/bundle.min.js"
+        strategy="beforeInteractive"
+      />
+      </head> */}
       <body>{children}</body>
       <Script
         type="module"

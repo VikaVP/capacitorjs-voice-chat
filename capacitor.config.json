@@ -9,5 +9,12 @@
       "launchShowDuration": 0
     }
   },
-  "cordova": {}
+  "cordova": {},
+  "server": {
+    "url": "http://192.168.0.36:3000"
+  },
+  "android": {
+    "loggingBehavior": "debug",
+    "webContentsDebuggingEnabled": true
+  }
 }
